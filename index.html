@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cityonary - Explore Cities</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Cityonary</h1>
+            <p class="subtitle">Discover the world's cities</p>
+        </header>
+        
+        <div class="controls">
+            <label for="country-select">Select Country:</label>
+            <select id="country-select" class="country-dropdown">
+                <option value="">-- Select a country --</option>
+                <option value="germany">Germany</option>
+                <option value="italy">Italy</option>
+            </select>
+        </div>
+        
+        <div id="cities-container" class="cities-container">
+            <div class="placeholder">
+                <p>Select a country from the dropdown above to view cities</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- City Detail Page -->
+    <div id="city-detail-page" class="city-detail-page hidden">
+        <div class="container">
+            <button id="back-button" class="back-button">
+                ← Back to Cities
+            </button>
+            
+            <header class="detail-header">
+                <h1 id="detail-city-name">City Name</h1>
+                <p class="detail-subtitle" id="detail-city-info">City Information</p>
+            </header>
+            
+            <div class="menu-cards-container">
+                <div class="menu-card" data-section="general">
+                    <div class="menu-card-icon">ℹ️</div>
+                    <h3>General Information</h3>
+                    <p>Learn about the city</p>
+                </div>
+                
+                <div class="menu-card" data-section="food">
+                    <div class="menu-card-icon">🍽️</div>
+                    <h3>Food & Restaurants</h3>
+                    <p>Discover local cuisine</p>
+                </div>
+                
+                <div class="menu-card" data-section="photos">
+                    <div class="menu-card-icon">📸</div>
+                    <h3>Photo Spots</h3>
+                    <p>Best places for photos</p>
+                </div>
+                
+                <div class="menu-card" data-section="attractions">
+                    <div class="menu-card-icon">🏛️</div>
+                    <h3>Attractions & POI</h3>
+                    <p>Points of interest</p>
+                </div>
+            </div>
+            
+            <div id="detail-content" class="detail-content">
+                <div class="content-placeholder">
+                    <p>Select a category above to view details</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
